@@ -9,7 +9,9 @@ import Cover from "./pages/cover";
 import Info from "./pages/info";
 import Contact from "./pages/contact";
 import Footer from "./pages/footer";
-import './assets/icons/style.css'
+import "./assets/icons/style.css";
+import usePreloader from "./hook";
+import Preloader from "./tools/loader";
 function App() {
   const [whiteMode, setWhiteMode] = useState(false);
   const changeTheme = () => {
@@ -23,7 +25,10 @@ function App() {
       body.classList.remove("dark");
     }
   }, [whiteMode]);
-
+  const { isLoading } = usePreloader();
+  if (isLoading) {
+    return <Preloader />;
+  }
   return (
     <div className={`bg-custom-purple ${whiteMode && "dark"} dark:bg-zinc-200`}>
       <Header changeTheme={changeTheme} whiteMode={whiteMode} />

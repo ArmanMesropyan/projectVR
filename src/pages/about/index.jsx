@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { imageAnimation, textAnimation, textAnimationY } from "../../utils/utils";
+import { textAnimation, textAnimationY } from "../../utils/utils";
 import vrImage from "../../assets/images/vr-images-2.jpeg";
 function About() {
   return (
