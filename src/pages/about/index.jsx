@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { imageAnimation, textAnimation } from "../../utils/utils";
+import { imageAnimation, textAnimation, textAnimationY } from "../../utils/utils";
 import vrImage from "../../assets/images/vr-images-2.jpeg";
 function About() {
   return (
@@ -55,10 +55,7 @@ function About() {
         </motion.div>
       </div>
 
-      <motion.div
-        variants={imageAnimation}
-        className="default-container  text-white  dark:text-custom-purple l:flex-col"
-      >
+      <div className="default-container  text-white  dark:text-custom-purple l:flex-col">
         <div className="w-2/5 mr-10 l:my-10 l:mr-0 l:w-full ">
           <div
             className="m-auto w-96 h-80 bg-cover bg-top bg-no-repeat rounded-custom-rounded-02 l:w-full l:h-96  "
@@ -66,9 +63,25 @@ function About() {
           />
         </div>
         <div className="w-3/5 l:w-full">
-          <h2 className="font-bold text-3xl">ABOUT</h2>
-          <h2 className="text-3xl my-5 ">HYDRA VR</h2>
-          <p className="text-sm leading-6 text-justify">
+          <motion.h2
+            variants={textAnimation}
+            custom={1}
+            className="font-bold text-3xl"
+          >
+            ABOUT
+          </motion.h2>
+          <motion.h2
+            variants={textAnimation}
+            custom={2}
+            className="text-3xl my-5 "
+          >
+            HYDRA VR
+          </motion.h2>
+          <motion.p
+            variants={textAnimation}
+            custom={3}
+            className="text-sm leading-6 text-justify"
+          >
             Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus
             mattis rhoncus urna neque viverra justo. Vivamus at augue eget arcu
             dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et
@@ -79,12 +92,16 @@ function About() {
             sit amet cursus sit amet. Vel eros donec ac odio tempor orci
             dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing
             bibendum. Leo a diam sollicitudi n tempor.
-          </p>
-          <button className="button-02 px-5 py-4 my-10 t:py-3 t:px-2 ">
+          </motion.p>
+          <motion.button
+            variants={textAnimationY}
+            custom={1}
+            className="button-02 px-5 py-4 my-10 t:py-3 t:px-2 "
+          >
             LET’S GET IN TOUCH
-          </button>
+          </motion.button>
         </div>
-      </motion.div>
+      </div>
 
       <div className="default-container text-white my-16 l:flex-col  dark:text-custom-purple">
         <div className="w-2/5 l:w-full">

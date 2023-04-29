@@ -1,10 +1,8 @@
 import React from "react";
-import { forwardRef } from "react";
-import { motion } from "framer-motion";
-const MainBar = forwardRef((props, ref) => {
+
+const MainBar = () => {
   return (
     <div
-      ref={ref}
       className="w-full py-5 px-6 flex justify-between text-white items-center mt-14 rounded-full bg-gradient-radial-to-tr dark:text-white dark:bg-gradient-radial-to-tr-white
         l:flex-col l:rounded-3xl
       "
@@ -88,7 +86,6 @@ const MainBar = forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
+};
 
 export default MainBar;
-export const MotionMainBar = motion(MainBar);

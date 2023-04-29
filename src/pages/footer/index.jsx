@@ -138,14 +138,13 @@ function Footer() {
           </div>
         </motion.div>
       </motion.div>
-      <motion.div
-        variants={imageAnimation}
+      <div
         className="text-white text-center text-sm py-8 border-t-2 border-pink-01/30 mx-10 dark:text-custom-purple"
       >
         <h4>
           2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED{" "}
         </h4>
-      </motion.div>
+      </div>
     </motion.footer>
   );
 }

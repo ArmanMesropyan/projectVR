@@ -1,16 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { imageAnimation } from "../../utils/utils";
 function Contact() {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
+    <div
       className="default-container mt-20"
     >
-      <motion.div
-        variants={imageAnimation}
+      <div
         className="rounded-3xl w-full text-white  bg-gradient-radial-to-tr pt-10 dark:text-custom-purple  dark:bg-gradient-radial-to-tr-white"
       >
         <div className="text-center">
@@ -69,8 +63,8 @@ function Contact() {
             <button className="button-02 py-2 px-8">Send to Hydra</button>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }
 

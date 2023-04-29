@@ -1,14 +1,13 @@
-import React , {useRef} from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import vrCover from "../../assets/images/vr-images.jpeg";
+
 import {
   textAnimation,
   buttonAnimation,
-  imageAnimation
 } from "../../utils/utils";
-import { MotionMainBar } from "./components/main_bar";
+import MainBar from "./components/main_bar";
+import vrCover from "../../assets/images/vr-images.jpeg";
 function Main() {
-  const ref = useRef()
   return (
     <>
       <motion.div
@@ -75,22 +74,15 @@ function Main() {
             </motion.div>
           </div>
         </div>
-        <motion.div className="w-2/4 l:w-full " variants={imageAnimation}>
+        <div className="w-2/4 l:w-full ">
           <div
             className="m-auto w-96 h-80 bg-cover bg-top bg-no-repeat rounded-custom-rounded l:w-full l:bg-center l:h-96 border-8 border-pink-01"
             style={{ backgroundImage: `url('${vrCover}')` }}
           />
-        </motion.div>
+        </div>
       </motion.div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="default-container"
-      >
-          <MotionMainBar variants={imageAnimation} ref={ref}/>
-      </motion.div>
+      <MainBar />
     </>
   );
 }
